@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Order extends TableImpl<OrderRecord> {
 
-    private static final long serialVersionUID = 209145362;
+    private static final long serialVersionUID = -2090730231;
 
     /**
      * The reference instance of <code>duoduo.order</code>
@@ -70,6 +70,41 @@ public class Order extends TableImpl<OrderRecord> {
      * The column <code>duoduo.order.create_time</code>.
      */
     public final TableField<OrderRecord, Timestamp> CREATE_TIME = createField("create_time", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false), this, "");
+
+    /**
+     * The column <code>duoduo.order.order_id</code>.
+     */
+    public final TableField<OrderRecord, String> ORDER_ID = createField("order_id", org.jooq.impl.SQLDataType.VARCHAR.length(128).nullable(false), this, "");
+
+    /**
+     * The column <code>duoduo.order.mobile</code>.
+     */
+    public final TableField<OrderRecord, String> MOBILE = createField("mobile", org.jooq.impl.SQLDataType.VARCHAR.length(32).nullable(false), this, "");
+
+    /**
+     * The column <code>duoduo.order.content</code>.
+     */
+    public final TableField<OrderRecord, String> CONTENT = createField("content", org.jooq.impl.SQLDataType.VARCHAR.length(1024).nullable(false), this, "");
+
+    /**
+     * The column <code>duoduo.order.receive_message_json</code>.
+     */
+    public final TableField<OrderRecord, String> RECEIVE_MESSAGE_JSON = createField("receive_message_json", org.jooq.impl.SQLDataType.CLOB, this, "");
+
+    /**
+     * The column <code>duoduo.order.receive_time</code>.
+     */
+    public final TableField<OrderRecord, Timestamp> RECEIVE_TIME = createField("receive_time", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
+
+    /**
+     * The column <code>duoduo.order.send_message_json</code>.
+     */
+    public final TableField<OrderRecord, String> SEND_MESSAGE_JSON = createField("send_message_json", org.jooq.impl.SQLDataType.CLOB, this, "");
+
+    /**
+     * The column <code>duoduo.order.receive_content</code>.
+     */
+    public final TableField<OrderRecord, String> RECEIVE_CONTENT = createField("receive_content", org.jooq.impl.SQLDataType.VARCHAR.length(256), this, "");
 
     /**
      * Create a <code>duoduo.order</code> table reference
