@@ -6,6 +6,7 @@ package com.duoduo.schema;
 
 import com.duoduo.schema.tables.Configuration;
 import com.duoduo.schema.tables.Order;
+import com.duoduo.schema.tables.ReceiveMessage;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +32,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Duoduo extends SchemaImpl {
 
-    private static final long serialVersionUID = 749199621;
+    private static final long serialVersionUID = 766015762;
 
     /**
      * The reference instance of <code>duoduo</code>
@@ -47,6 +48,11 @@ public class Duoduo extends SchemaImpl {
      * The table <code>duoduo.order</code>.
      */
     public final Order ORDER = com.duoduo.schema.tables.Order.ORDER;
+
+    /**
+     * The table <code>duoduo.receive_message</code>.
+     */
+    public final ReceiveMessage RECEIVE_MESSAGE = com.duoduo.schema.tables.ReceiveMessage.RECEIVE_MESSAGE;
 
     /**
      * No further instances allowed
@@ -74,6 +80,7 @@ public class Duoduo extends SchemaImpl {
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
             Configuration.CONFIGURATION,
-            Order.ORDER);
+            Order.ORDER,
+            ReceiveMessage.RECEIVE_MESSAGE);
     }
 }

@@ -6,6 +6,7 @@ package com.duoduo.schema;
 
 import com.duoduo.schema.tables.Configuration;
 import com.duoduo.schema.tables.Order;
+import com.duoduo.schema.tables.ReceiveMessage;
 
 import javax.annotation.Generated;
 
@@ -32,4 +33,9 @@ public class Tables {
      * The table <code>duoduo.order</code>.
      */
     public static final Order ORDER = com.duoduo.schema.tables.Order.ORDER;
+
+    /**
+     * The table <code>duoduo.receive_message</code>.
+     */
+    public static final ReceiveMessage RECEIVE_MESSAGE = com.duoduo.schema.tables.ReceiveMessage.RECEIVE_MESSAGE;
 }
